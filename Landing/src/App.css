@@ -1,0 +1,47 @@
+body * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body #root {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: [primera] 1fr [segunda] 1fr [tercera] 1fr [cuarta];
+  grid-template-rows: [primera] 1fr [segunda] 3fr [tercera] 3fr [cuarta];
+}
+body #root nav {
+  grid-row: primera/segunda;
+  grid-column: primera/cuarta;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: rgb(255, 255, 255);
+}
+body #root nav #navTitulo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body #root nav #navTitulo h1 {
+  color: black;
+}
+body #root nav #navLinks {
+  width: 30%;
+}
+body #root nav #navLinks li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 50%;
+  min-height: 30%;
+  border: solid;
+  border-radius: 100px;
+  height: fit-content;
+  background-color: rgba(36, 36, 29, 0.554);
+}
+body #root nav #navLinks li a {
+  color: black;
+}
+
+/*# sourceMappingURL=App.css.map */
