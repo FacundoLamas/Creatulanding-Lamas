@@ -1,5 +1,8 @@
 const Nav = ({actual,referencia,otra})=>{
     return <nav>
+            <div id="navImg">
+                <img src="/Logo.jpg" alt="" />
+            </div>
             <div id="navTitulo">
                 <h1>E-Commerce</h1>
             </div>
@@ -11,6 +14,7 @@ const Nav = ({actual,referencia,otra})=>{
                     <a href={referencia}>{otra}</a>
                 </li>
             </ul>
+            
         </nav>
     
 };

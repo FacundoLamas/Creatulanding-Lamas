@@ -4,7 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Boton from "./components/button"
 import Nav from "./components/navbar"
-
+import Carrito from "./components/cartwidget"
 function App() {
   const [count, setCount] = useState(0)
 
@@ -16,7 +16,7 @@ function App() {
   return (
     <>
       <Nav actual={"Principal"} referencia="./tienda.jsx" otra={"Tienda"}></Nav>
-      <Boton id="hola" label={"Hola"}>  </Boton>
+      <Carrito></Carrito>
     </>
   )
 }

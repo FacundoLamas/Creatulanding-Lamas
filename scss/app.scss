@@ -13,34 +13,47 @@ body{
     nav{
         grid-row: primera/segunda;
         grid-column: primera/cuarta;
-        display: flex;
-        flex-direction: row;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
         justify-content: space-between;
         background-color:rgb(255, 255, 255);
-        #navTitulo{
-            
+        #navImg{
+            width: 1fr;
             display: flex;
-            justify-content: center;
+            justify-content: end;
+            align-items: center;
+            img{
+                width: 20vh;
+            }
+        }
+        #navTitulo{
+            width: 1fr;
+            display: flex;
+            justify-content: start;
             align-items: center;
             h1{
                 color: black;
+                font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             }
         }
         #navLinks{
-            width: 30%;
+            width: 1fr;
+            display: flex;
+            flex-direction: row;
+            justify-content: start;
+            align-items: center;
             li{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                max-width: 50%;
-                min-height: 30%;
-                border: solid;
-                border-radius: 100px;
+                margin: 1vw;
+                width: max-content;
+                padding: 0% 5%;
                 height: fit-content;
-                
-                background-color: rgba(36, 36, 29, 0.554);
+                border: solid;
+                border-color: black;
+                border-radius: 100px;
+                background-color: whitesmoke;
                 a{
                     color: black;
+                    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
                 }
             }
         }
