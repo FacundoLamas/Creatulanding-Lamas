@@ -86,8 +86,21 @@ nav #nav #cartwidget {
   width: 20%;
   height: 100%;
 }
+nav #nav #cartwidget button {
+  position: relative;
+}
 nav #nav #cartwidget button:hover {
   background-color: yellow;
+}
+nav #nav #cartwidget button span {
+  position: absolute;
+  top: 50%;
+  right: 35%;
+  border-radius: 100%;
+  color: white;
+  background-color: red;
+  width: 15%;
+  height: 30%;
 }
 
 #cartwidget {
@@ -106,9 +119,19 @@ nav #nav #cartwidget button:hover {
   justify-content: center;
 }
 
-.itemList {
+#list {
+  display: flex;
+  flex-direction: column;
   grid-column: primera/cuarta;
   grid-row: segunda/cuarta;
+}
+#list h2 {
+  color: black;
+  text-align: center;
+  font-size: 50px;
+  background-color: white;
+}
+#list .itemList {
   width: 100vw;
   display: flex;
   flex-wrap: wrap;
@@ -124,7 +147,7 @@ nav #nav #cartwidget button:hover {
   flex-direction: column;
   text-align: center;
   align-items: center;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.762);
   padding: 1%;
   border-radius: 100px;
   width: auto;
@@ -137,6 +160,9 @@ nav #nav #cartwidget button:hover {
   width: 80%;
   height: 50%;
   border-radius: 100px;
+}
+.productcard span {
+  font-size: x-large;
 }
 
 /*# sourceMappingURL=App.css.map */

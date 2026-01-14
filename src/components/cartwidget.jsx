@@ -4,7 +4,8 @@ const carrito=({items}) =>{
     return <>
         <div id="cartwidget">                            
             <button type="button">               
-                <img src="/carrito.svg" alt=""/>          
+                <img src="/carrito.svg" alt=""/>  
+                <span>1</span>
             </button>
         </div>
         

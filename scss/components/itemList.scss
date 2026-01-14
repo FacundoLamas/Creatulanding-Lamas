@@ -1,12 +1,23 @@
-.itemList{
+#list{
+    display: flex;
+    flex-direction: column;
     grid-column: primera/cuarta;
     grid-row: segunda/cuarta;
-    width: 100vw;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    padding: 5%;
-    background-color: gray;
-    overflow: scroll;
+    h2{
+        color: black;
+        text-align: center;
+        font-size: 50px;
+        background-color: white;
+    }
+    .itemList{
+        width: 100vw;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 5%;
+        background-color: gray;
+        overflow: scroll;
+    }
 }
+
