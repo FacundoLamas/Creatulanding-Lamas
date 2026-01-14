@@ -5,7 +5,7 @@ body{
         box-sizing: border-box;
         margin: 0;
         padding: 0;
-        overflow: hidden;
+        
     }
     #root{
     width: 100vw;
@@ -13,6 +13,6 @@ body{
     display:grid;
     grid-template-columns: [primera] 1fr [segunda] 1fr [tercera] 1fr [cuarta];
     grid-template-rows: [primera] 1fr [segunda] 1fr [tercera] 4fr [cuarta];
-    
+    overflow: scroll;
     }
     }

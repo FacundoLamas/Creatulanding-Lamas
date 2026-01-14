@@ -1,0 +1,12 @@
+.itemList{
+    grid-column: primera/cuarta;
+    grid-row: segunda/cuarta;
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 5%;
+    background-color: gray;
+    overflow: scroll;
+}

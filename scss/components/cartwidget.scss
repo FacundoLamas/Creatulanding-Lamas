@@ -1,0 +1,15 @@
+#cartwidget{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    button{
+        height: 40%;
+        width: 40%;
+        background-color: white;
+        border: solid;
+        border-color: black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

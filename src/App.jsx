@@ -5,6 +5,7 @@ import './App.css'
 import Boton from "./components/button"
 import Nav from "./components/navbar"
 import Carrito from "./components/cartwidget"
+import Lista from "./components/itemList"
 function App() {
   const [count, setCount] = useState(0)
 
@@ -16,7 +17,7 @@ function App() {
   return (
     <>
       <Nav actual={"Principal"} referencia="./tienda.jsx" otra={"Tienda"}></Nav>
-      <Carrito></Carrito>
+      <Lista></Lista>
       
     </>
   )

@@ -5,7 +5,6 @@ body * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  overflow: hidden;
 }
 body #root {
   width: 100vw;
@@ -13,55 +12,131 @@ body #root {
   display: grid;
   grid-template-columns: [primera] 1fr [segunda] 1fr [tercera] 1fr [cuarta];
   grid-template-rows: [primera] 1fr [segunda] 1fr [tercera] 4fr [cuarta];
+  overflow: scroll;
 }
 
 nav {
+  height: 100%;
+  width: 100%;
   grid-row: primera/segunda;
   grid-column: primera/cuarta;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: rgb(255, 255, 255);
 }
-nav #navImg {
-  width: 1fr;
-  display: flex;
-  justify-content: end;
-  align-items: center;
-}
-nav #navImg img {
-  width: 20vh;
-}
-nav #navTitulo {
-  width: 1fr;
-  display: flex;
-  justify-content: start;
-  align-items: center;
-}
-nav #navTitulo h1 {
-  color: black;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
-nav #navLinks {
-  width: 1fr;
+nav #nav {
+  height: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: start;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+nav #nav #navImg {
+  height: 100%;
+  width: 10%;
+}
+nav #nav #navImg img {
+  height: 100%;
+  width: 100%;
+}
+nav #nav #navTitulo {
+  width: 25%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
   align-items: center;
 }
-nav #navLinks li {
-  margin: 1vw;
-  width: max-content;
-  padding: 0% 5%;
-  height: fit-content;
+nav #nav #navTitulo h1 {
+  color: black;
+}
+nav #nav #navLinks {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+nav #nav #navLinks li {
+  width: 30%;
+  height: 30%;
   border: solid;
   border-color: black;
   border-radius: 100px;
-  background-color: whitesmoke;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 5%;
 }
-nav #navLinks li a {
+nav #nav #navLinks li:hover {
+  background-color: yellow;
+}
+nav #nav #navLinks li a {
+  width: 100%;
+  height: 100%;
   color: black;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+nav #nav #cartwidget {
+  width: 20%;
+  height: 100%;
+}
+nav #nav #cartwidget button:hover {
+  background-color: yellow;
+}
+
+#cartwidget {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#cartwidget button {
+  height: 40%;
+  width: 40%;
+  background-color: white;
+  border: solid;
+  border-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.itemList {
+  grid-column: primera/cuarta;
+  grid-row: segunda/cuarta;
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 5%;
+  background-color: gray;
+  overflow: scroll;
+}
+
+.productcard {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  background-color: white;
+  padding: 1%;
+  border-radius: 100px;
+  width: auto;
+  height: 100%;
+  justify-content: center;
+  margin-right: 5%;
+  margin-bottom: 5%;
+}
+.productcard img {
+  width: 80%;
+  height: 50%;
+  border-radius: 100px;
 }
 
 /*# sourceMappingURL=App.css.map */
