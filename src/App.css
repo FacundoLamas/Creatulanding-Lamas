@@ -10,40 +10,51 @@ body #root {
   width: 100vw;
   height: 100vh;
   display: grid;
-  grid-template-columns: [primera] 1fr [segunda] 1fr [tercera] 1fr [cuarta];
-  grid-template-rows: [primera] 1fr [segunda] 1fr [tercera] 4fr [cuarta];
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
   overflow: scroll;
 }
 
 nav {
-  height: 100%;
+  height: auto;
   width: 100%;
-  grid-row: primera/segunda;
-  grid-column: primera/cuarta;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  grid-row: 1/1;
+  grid-column: 1/5;
   background-color: rgb(255, 255, 255);
 }
 nav #nav {
   height: 100%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
+  display: grid;
+  grid-template-columns: repeat(4, 1f);
   align-items: center;
-  justify-content: center;
+  justify-content: start;
+  gap: 10%;
   width: 100%;
+}
+@media (max-width: 720px) {
+  nav #nav {
+    gap: 10%;
+    display: flex;
+  }
 }
 nav #nav #navImg {
-  height: 100%;
-  width: 10%;
+  grid-column: 1;
+}
+@media (max-width: 720px) {
+  nav #nav #navImg {
+    display: none;
+  }
 }
 nav #nav #navImg img {
-  height: 100%;
-  width: 100%;
+  width: 50%;
+}
+@media (max-width: 1200px) {
+  nav #nav #navImg img {
+    width: 100%;
+  }
 }
 nav #nav #navTitulo {
-  width: 25%;
+  grid-column: 2;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -51,25 +62,35 @@ nav #nav #navTitulo {
 }
 nav #nav #navTitulo h1 {
   color: black;
+  font-size: 3vw;
+}
+@media (max-width: 720px) {
+  nav #nav #navTitulo h1 {
+    font-size: 5vw;
+  }
 }
 nav #nav #navLinks {
-  width: 40%;
+  grid-column: 4;
   height: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  gap: 5%;
+}
+@media (max-width: 720px) {
+  nav #nav #navLinks {
+    flex-direction: column;
+    grid-column: 2;
+  }
 }
 nav #nav #navLinks li {
-  width: 30%;
-  height: 30%;
+  padding: 10%;
   border: solid;
   border-color: black;
   border-radius: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 5%;
+  text-align: center;
+  list-style: none;
 }
 nav #nav #navLinks li:hover {
   background-color: yellow;
@@ -78,15 +99,14 @@ nav #nav #navLinks li a {
   width: 100%;
   height: 100%;
   color: black;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 nav #nav #cartwidget {
-  width: 20%;
+  grid-column: 5/7;
+  width: 50%;
   height: 100%;
 }
 nav #nav #cartwidget button {
+  width: 100%;
   position: relative;
 }
 nav #nav #cartwidget button:hover {
@@ -94,13 +114,23 @@ nav #nav #cartwidget button:hover {
 }
 nav #nav #cartwidget button span {
   position: absolute;
-  top: 50%;
-  right: 35%;
+  top: 90%;
+  right: 80%;
   border-radius: 100%;
   color: white;
   background-color: red;
-  width: 15%;
-  height: 30%;
+  padding: 5% 10% 5% 10%;
+  z-index: 10;
+}
+nav #nav #cartwidget button img {
+  width: 100%;
+  z-index: 100;
+}
+@media (max-width: 720px) {
+  nav #nav #cartwidget button img {
+    width: 50%;
+    height: 50%;
+  }
 }
 
 #cartwidget {
@@ -122,24 +152,33 @@ nav #nav #cartwidget button span {
 #list {
   display: flex;
   flex-direction: column;
-  grid-column: primera/cuarta;
-  grid-row: segunda/cuarta;
+  grid-column: 1/5;
+  grid-row: 2/5;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
 }
-#list h2 {
+#list .nameList {
+  width: 100%;
+  border-top: 3px solid black;
+  border-width: 3px;
+}
+#list .nameList h2 {
   color: black;
   text-align: center;
   font-size: 50px;
   background-color: white;
 }
 #list .itemList {
-  width: 100vw;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   padding: 5%;
-  background-color: gray;
+  background-color: rgba(0, 0, 0, 0.503);
   overflow: scroll;
+  gap: 5%;
 }
 
 .productcard {
@@ -147,14 +186,13 @@ nav #nav #cartwidget button span {
   flex-direction: column;
   text-align: center;
   align-items: center;
+  gap: 10%;
   background-color: rgba(255, 255, 255, 0.762);
   padding: 1%;
   border-radius: 100px;
   width: auto;
   height: 100%;
   justify-content: center;
-  margin-right: 5%;
-  margin-bottom: 5%;
 }
 .productcard img {
   width: 80%;
@@ -163,6 +201,20 @@ nav #nav #cartwidget button span {
 }
 .productcard span {
   font-size: x-large;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 5%;
+  grid-column: 1/5;
+  grid-row: 5/5;
+  background-color: white;
+}
+footer div {
+  color: black;
+  width: 1fr;
 }
 
 /*# sourceMappingURL=App.css.map */

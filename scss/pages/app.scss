@@ -8,11 +8,11 @@ body{
         
     }
     #root{
-    width: 100vw;
-    height: 100vh;
-    display:grid;
-    grid-template-columns: [primera] 1fr [segunda] 1fr [tercera] 1fr [cuarta];
-    grid-template-rows: [primera] 1fr [segunda] 1fr [tercera] 4fr [cuarta];
-    overflow: scroll;
+        width: 100vw;
+        height: 100vh;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 1fr); 
+        overflow: scroll;
     }
     }

@@ -1,5 +1,6 @@
 import Carrito from "./cartwidget"
 
+
 const Nav = ({actual,referencia,otra})=>{
     return <nav>
             <div id="nav">
@@ -13,7 +14,7 @@ const Nav = ({actual,referencia,otra})=>{
                 </div>
                 <ul id="navLinks">
                     <li>
-                        <a href="">
+                        <a href="./.">
                             {actual}
                         </a>
                     </li>
@@ -25,9 +26,6 @@ const Nav = ({actual,referencia,otra})=>{
                 </ul>
                 <Carrito></Carrito>
             </div>
-            
-            
-            
         </nav>
     
 };

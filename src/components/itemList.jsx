@@ -2,7 +2,9 @@ import Producto from "./productcard"
 
 const Lista = ({titulo}) => {
     return <div id="list">
-        <h2>{titulo}</h2>
+            <div className="nameList">
+                <h2>{titulo}</h2>
+            </div>
             <div className="itemList" >
                 <Producto img={'/remeraDeportiva.jpg'} texto={'Remeras deportivas'} ></Producto>
                 <Producto img={'/remeraNegra.jpg'} texto={'Remera negra'} ></Producto>

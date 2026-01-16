@@ -1,0 +1,13 @@
+footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5%;
+    grid-column: 1/5;
+    grid-row: 5/5;
+    background-color: white;
+    div{
+        color: black;
+        width: 1fr;
+    }
+}

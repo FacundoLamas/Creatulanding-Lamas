@@ -1,23 +1,32 @@
 #list{
     display: flex;
     flex-direction: column;
-    grid-column: primera/cuarta;
-    grid-row: segunda/cuarta;
-    h2{
-        color: black;
-        text-align: center;
-        font-size: 50px;
-        background-color: white;
+    grid-column: 1/5;
+    grid-row: 2/5;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    .nameList{
+        width: 100%;
+        border-top: 3px solid  black;
+        border-width: 3px;
+        h2{
+            color: black;
+            text-align: center;
+            font-size: 50px;
+            background-color: white;
+        }
     }
     .itemList{
-        width: 100vw;
+        width: 100%;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
         padding: 5%;
-        background-color: gray;
+        background-color: rgba(0, 0, 0, 0.503);
         overflow: scroll;
+        gap: 5%;
     }
 }
 
