@@ -5,7 +5,7 @@ const carrito=({items}) =>{
         <div id="cartwidget">                            
             <button type="button">               
                 <img src="/carrito.svg" alt=""/>  
-                <span>1</span>
+                <span>{items}</span>
             </button>
         </div>
         

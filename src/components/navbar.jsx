@@ -1,7 +1,7 @@
 import Carrito from "./cartwidget"
 
 
-const Nav = ({actual,referencia,otra})=>{
+const Nav = (props)=>{
     return <nav>
             <div id="nav">
                 <div id="navImg">
@@ -15,16 +15,16 @@ const Nav = ({actual,referencia,otra})=>{
                 <ul id="navLinks">
                     <li>
                         <a href="./.">
-                            {actual}
+                            {props.actual}
                         </a>
                     </li>
                     <li>
-                        <a href={referencia}>
-                            {otra}
+                        <a href={props.referencia}>
+                            {props.otra}
                         </a>
                     </li>
                 </ul>
-                <Carrito></Carrito>
+                <Carrito items={props.itemsCarrito}></Carrito>
             </div>
         </nav>
     
