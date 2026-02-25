@@ -1,25 +1,25 @@
 import { useState, useEffect } from "react"
 import Producto from "./productcard"
-import { obtenerUser } from "../services/users"
+import { obtenerProductos } from "../services/users"
+
+// Obtener user es un servicio que trae la data de los usuarios de empleados como data.
+// Viene como un array de objetos JS
 
 const Lista = ({titulo, funcion}) => {
-    
-    const [users, setUsers] = useState([])
+    const [user, setUser] = useState([])
+    const [datos, setDatos] = useState(true)
 
-
-
-
-    //     useEffect(() => {
-    //     obtenerUser()
-    //         .then((response) => {
-    //             console.log("Datos encontrados", response);
-    //             setUsers(response.data); 
-    //         })
-    //         .catch((err) => {
-    //             console.error("Error al obtener los datos:", err);
-
-    //         });
-    // }, []);
+    useEffect(()=>{
+        obtenerProductos()
+            .then((respuesta) => {
+                console.log("Datos Encontrados",respuesta.data);
+                setUser(respuesta.data)
+                setTimeout(() => setDatos(false),5000)
+            })
+            .catch((respuesta) => {
+                console.error("Datos no encontrados");
+            })
+    },[])
 
 
     
@@ -27,23 +27,14 @@ const Lista = ({titulo, funcion}) => {
             <div className="nameList">
                 <h2>{titulo}</h2>
             </div>
-            <div className="itemList" >
-                <Producto suma ={funcion} img={'/remeraDeportiva.jpg'} texto={'Remeras deportivas'} ></Producto>
-                <Producto suma ={funcion} img={'/remeraNegra.jpg'} texto={'Remera negra'} ></Producto>
-                <Producto suma ={funcion} img={'/remeraAzul.png'} texto={'Remera azul'} ></Producto>
-                <Producto suma ={funcion} img={'/remeraBlanca.jpg'} texto={'Remera blanca'} ></Producto>
-                <Producto suma ={funcion} img={'/remeraVerde.png'} texto={'Remera verde'} ></Producto>
-            </div>
+            {/* Aca se usa una funcion asincrona que me trae el servicio de users, malnombreado por que me trae los productos
+            tengo que cambiarle el nombre pero no tengo ganas aun */}
+            {datos ? <p id="cargando" >Cargando . . .</p> :  
+                        <div className="itemList">
+                            {user.map((objeto,index) => <Producto suma={funcion} key={index} texto={objeto.producto} img={objeto.img}/>)}
+                        </div>
+                    }
         </div> 
-    // return <div id="list">
-    //     <h2>{titulo}</h2>
-    //     <div className="itemlist">
-    //     {users.map((usuario, index) => {
-    //         return <Producto key={index} data={usuario}/>
-    //     })}
-    //     </div>
-        
-    // </div>
         
 }
 

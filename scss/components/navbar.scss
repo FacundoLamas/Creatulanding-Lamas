@@ -75,6 +75,7 @@ nav{
                 button{
                     width: 100%;
                     position: relative;
+                    z-index: 100;
                     &:hover{
                         background-color: yellow;
                     }
@@ -94,7 +95,8 @@ nav{
                     }
                     img{
                         width: 100%;
-                        z-index: 100;
+                        user-select: none;
+                        pointer-events: none;
                         @media(max-width:720px){
                             width: 50%;
                             height: 50%;

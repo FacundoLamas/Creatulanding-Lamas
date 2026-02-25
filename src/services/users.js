@@ -1,10 +1,10 @@
 
-import { empleados } from "../../scss/data/users";
-const obtenerUser  = ()=> {
+import { productos } from "../../scss/data/users";
+const obtenerProductos  = ()=> {
         return new Promise((resolve, reject) => {
             const operador = true
             if(operador){
-                resolve({succes:true , data: empleados})
+                resolve({succes:true , data: productos})
             }
             else{
                 reject({succes:false, data:""})
@@ -12,4 +12,4 @@ const obtenerUser  = ()=> {
         });
     }
 
-    export {obtenerUser}
+    export {obtenerProductos}

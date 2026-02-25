@@ -103,6 +103,7 @@ nav #nav #cartwidget {
 nav #nav #cartwidget button {
   width: 100%;
   position: relative;
+  z-index: 100;
 }
 nav #nav #cartwidget button:hover {
   background-color: yellow;
@@ -124,7 +125,8 @@ nav #nav #cartwidget button span {
 }
 nav #nav #cartwidget button img {
   width: 100%;
-  z-index: 100;
+  user-select: none;
+  pointer-events: none;
 }
 @media (max-width: 720px) {
   nav #nav #cartwidget button img {
@@ -134,7 +136,9 @@ nav #nav #cartwidget button img {
 }
 
 #cartwidget {
+  position: relative;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
@@ -147,6 +151,31 @@ nav #nav #cartwidget button img {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+#cartwidget #popuplista {
+  position: absolute;
+  color: black;
+  padding: 50%;
+  border: solid;
+  border-radius: 40px;
+  top: 90%;
+  background-color: white;
+  max-height: 50vh;
+  overflow: scroll;
+}
+#cartwidget #popuplista ul li {
+  position: relative;
+  padding-bottom: 10%;
+  width: 100%;
+  border-bottom: solid;
+  list-style: none;
+  font-size: large;
+}
+#cartwidget #popuplista ul li img {
+  position: absolute;
+  width: 40%;
+  left: -50%;
+  top: 20%;
 }
 
 #list {
@@ -168,6 +197,14 @@ nav #nav #cartwidget button img {
   text-align: center;
   font-size: 50px;
   background-color: white;
+}
+#list #cargando {
+  color: black;
+  padding: 50px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size: xx-large;
 }
 #list .itemList {
   width: 100%;
