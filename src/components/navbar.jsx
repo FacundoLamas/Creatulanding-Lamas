@@ -24,7 +24,7 @@ const Nav = (props)=>{
                         </a>
                     </li>
                 </ul>
-                <Carrito items={props.itemsCarrito} compras ={props.compras}></Carrito>
+                <Carrito items={props.itemsCarrito} compra ={props.compra}></Carrito>
             </div>
         </nav>
     

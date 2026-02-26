@@ -1,5 +1,5 @@
 
-import { productos } from "../../scss/data/users";
+import { productos } from "../../scss/data/products";
 const obtenerProductos  = ()=> {
         return new Promise((resolve, reject) => {
             const operador = true

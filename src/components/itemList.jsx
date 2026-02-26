@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react"
 import Producto from "./productcard"
-import { obtenerProductos } from "../services/users"
+import { obtenerProductos } from "../services/products"
 
-// Obtener user es un servicio que trae la data de los usuarios de empleados como data.
+// Obtener productos es un servicio que trae los productos de cada pagina como data.
 // Viene como un array de objetos JS
 
 const Lista = ({titulo, funcion}) => {
@@ -27,8 +27,6 @@ const Lista = ({titulo, funcion}) => {
             <div className="nameList">
                 <h2>{titulo}</h2>
             </div>
-            {/* Aca se usa una funcion asincrona que me trae el servicio de users, malnombreado por que me trae los productos
-            tengo que cambiarle el nombre pero no tengo ganas aun */}
             {datos ? <p id="cargando" >Cargando . . .</p> :  
                         <div className="itemList">
                             {user.map((objeto,index) => <Producto suma={funcion} key={index} texto={objeto.producto} img={objeto.img}/>)}

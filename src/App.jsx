@@ -5,15 +5,15 @@ import Lista from "./components/itemList"
 import FOOTER from './components/footer'
 
 function App() {
-  const [compra, setCompra] = useState(null)
+  const [compras, setCompras]= useState([])  //Array de compras
   
   
-  const [dato, setdato]= useState([])
+  
   function comprar ( objeto ){
-    setdato([...dato,objeto]);
+    setCompras([...compras,objeto]);
   }
   function eliminarcompra (objeto,index){
-    setdato(dato.filter((objeto,indice) => index !== indice));
+    setCompras(compras.filter((objeto,indice) => index !== indice));
   }
   const[texto, setTexto] = useState('')
   const cambio = (event) => {setTexto(event.target.value)}
@@ -25,9 +25,13 @@ function App() {
     return count;
   }
 
+
+
+
+
   return (
     <>
-      <Nav actual={"Remeras"} referencia="./App.jsx" otra={"Camperas"} compras={{dato,eliminarcompra}} itemsCarrito={contar(dato)} />
+      <Nav actual={"Remeras"} referencia="./App.jsx" otra={"Camperas"} compra={{compras,eliminarcompra}} itemsCarrito={contar(compras)} />
       <Lista titulo={"Remeras"} funcion={comprar}  />
       <input type="text" onChange={cambio}/>
       <p>{texto}</p>
