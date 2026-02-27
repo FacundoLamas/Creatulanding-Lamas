@@ -1,0 +1,88 @@
+#detalles{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    nav{
+        height: 20vh;
+        width: 100vw;
+        background-color:rgb(255, 255, 255);
+        #nav{
+            display: flex;
+            justify-content: center;
+            #navImg{
+                position: relative;
+                @media(max-width:1200px){
+                    display: none;
+                }
+                img{
+                    width: 20vh;
+                }
+            }
+            #navTitulo{
+                height: 100%;
+                h1{
+                    color: black;
+                    font-size: 3vw;
+                    @media(max-width:720px){
+                        font-size: 5vw;
+                    }
+                }
+            }
+            #navLinks{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                li{
+                    padding: 10%;
+                    border: solid ;
+                    border-color: black;
+                    border-radius: 100px;
+                    text-align: center;
+                    list-style: none;
+                    &:hover{
+                        background-color: yellow;
+                    }
+                    a{
+                        width: 100%;
+                        height: 100%;
+                        color: black;
+                    }
+                }
+            }
+        }
+        
+        
+    }
+    #detallesdiv{
+        width: 100vw;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        flex-direction: row;
+        padding:5vh 5vw 0 5vw;
+        
+        #detallestexto{
+            width: 40vw;
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+            h1{
+                color: black;
+                text-decoration:underline solid black;
+            }
+            p{
+                color: black;
+                padding: 0 5% 0 0;
+            }
+        }
+        #detallesimg{
+            width: 40vw;
+            background-color: white;
+            img{
+                width: 100%;
+            }
+        }
+    }
+}

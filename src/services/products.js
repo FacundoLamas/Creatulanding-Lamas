@@ -11,5 +11,10 @@ const obtenerProductos  = ()=> {
             }
         });
     }
+const obtenerProductoSimple = (id) =>{
+    return new Promise((resolve,reject) =>{
+        resolve({succes:true,data:productos[id]})
+    })
+}
 
-    export {obtenerProductos}
+    export {obtenerProductos,obtenerProductoSimple}

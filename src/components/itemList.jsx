@@ -29,7 +29,7 @@ const Lista = ({titulo, funcion}) => {
             </div>
             {datos ? <p id="cargando" >Cargando . . .</p> :  
                         <div className="itemList">
-                            {user.map((objeto,index) => <Producto suma={funcion} key={index} texto={objeto.producto} img={objeto.img}/>)}
+                            {user.map((objeto,index) => <Producto suma={funcion} key={index} id={index} texto={objeto.producto} img={objeto.img}/>)}
                         </div>
                     }
         </div> 

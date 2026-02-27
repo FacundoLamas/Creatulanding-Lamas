@@ -14,17 +14,19 @@ const Nav = (props)=>{
                 </div>
                 <ul id="navLinks">
                     <li>
-                        <a href="./.">
+                        <a href={props.linkactual}>
                             {props.actual}
                         </a>
                     </li>
                     <li>
-                        <a href={props.referencia}>
+                        <a href={props.linkotra}>
                             {props.otra}
                         </a>
                     </li>
                 </ul>
-                <Carrito items={props.itemsCarrito} compra ={props.compra}></Carrito>
+                { props.carrito ? <div></div> :
+                    <Carrito items={props.itemsCarrito} compra ={props.compra}></Carrito>
+                }
             </div>
         </nav>
     
