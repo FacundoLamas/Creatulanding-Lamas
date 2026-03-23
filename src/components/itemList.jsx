@@ -5,7 +5,7 @@ import Service from "../services/products"
 // Obtener productos es un servicio que trae los productos de cada pagina como data.
 // Viene como un array de objetos JS
 
-const Lista = ({titulo, funcion}) => {
+const Lista = ({titulo}) => {
     const [user, setUser] = useState([])
     const [datos, setDatos] = useState(true)
 
@@ -29,7 +29,7 @@ const Lista = ({titulo, funcion}) => {
             </div>
             {datos ? <p id="cargando" >Cargando . . .</p> :  
                         <div className="itemList">
-                            {user.map((objeto,index) => <Producto suma={funcion} key={index} id={index} texto={objeto.producto} img={objeto.img}/>)}
+                            {user.map((objeto,index) => <Producto  key={index} id={index} texto={objeto.producto} img={objeto.img}/>)}
                         </div>
                     }
         </div> 

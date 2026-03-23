@@ -1,7 +1,13 @@
+import { use, useContext } from "react";
 import Carrito from "./cartwidget"
 import { NavLink } from "react-router-dom";
 
+
 const Nav = (props)=>{
+    
+    
+
+
     return <nav>
             <div id="nav">
                 <div id="navImg">
@@ -21,7 +27,7 @@ const Nav = (props)=>{
                     </li>
                 </ul>
                 { props.carrito ? <div></div> :
-                    <Carrito items={props.itemsCarrito} compra ={props.compra}></Carrito>
+                    <Carrito ></Carrito>
                 }
             </div>
         </nav>

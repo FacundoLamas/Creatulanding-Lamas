@@ -2,16 +2,18 @@ import React, { useEffect } from "react";
 import { useState } from 'react'
 import { href, Link, Route } from "react-router-dom";
 import detalle from "./detalle";
+import { useCarrito } from "../contexts/contextCart";
 
 
 
-const carta = ({img,texto , suma,id}) =>{
-    const [clase,setClase] = useState("productcard ")
+const carta = ({img,texto ,id}) =>{
+    const [clase,setClase] = useState("productcard ");
+    const {comprar} = useCarrito();
     function handleChange (){
         // setClase((previo) => previo === 'productcard Touched' ? 'productcard Untouched ' : 'productcard Touched')
         setClase("productcard Touched");
         setTimeout(() => setClase("productcard Untouched"),100);
-        suma(texto);
+        comprar(texto);
     }
     
     return <div className={clase} >
