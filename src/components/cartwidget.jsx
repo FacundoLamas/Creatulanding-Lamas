@@ -23,7 +23,7 @@ const carrito=({items, compra}) =>{
             </button>
             {visibilidad ? <></> : <div id="popuplista">
                     <ul>
-                        {compra.compras.map((objeto,index) => <li key={index}><img src="public\trash.png" onClick={()=>compras.eliminarcompra(objeto,index)} alt="" />{objeto}</li>)}
+                        {compra.compras.map((objeto,index) => <li key={index}><img src="public\trash.png" onClick={()=>compra.eliminarcompra(objeto,index)} alt="" />{objeto}</li>)}
                     </ul>
                 </div>}
         </div>

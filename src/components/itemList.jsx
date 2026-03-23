@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 import Producto from "./productcard"
-import { obtenerProductos } from "../services/products"
+import Service from "../services/products"
 
 // Obtener productos es un servicio que trae los productos de cada pagina como data.
 // Viene como un array de objetos JS
@@ -10,7 +10,7 @@ const Lista = ({titulo, funcion}) => {
     const [datos, setDatos] = useState(true)
 
     useEffect(()=>{
-        obtenerProductos()
+        Service.obtenerProductos()
             .then((respuesta) => {
                 console.log("Datos Encontrados",respuesta.data);
                 setUser(respuesta.data)

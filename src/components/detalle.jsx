@@ -1,18 +1,18 @@
 import { data, useParams } from "react-router-dom"
 import Nav from "./navbar"
-import { obtenerProductoSimple } from "../services/products";
+import Service from "../services/products";
 import Producto from "./productcard"
 import { useEffect, useState } from "react";
 const detalle = () => {
     const {id} = useParams();
-    const numericId = parseInt(id, 10);
+    const numerProd = parseInt(id, 10);
     const [product, setProduct] = useState({})
     useEffect(() =>{
-        obtenerProductoSimple(numericId)
+        Service.obtenerProductoSimple(numerProd)
             .then((respuesta) =>{
                 setProduct(respuesta.data);
                 console.log(respuesta)
-                console.log(numericId)
+                console.log(numerProd)
             })
     
         },[])

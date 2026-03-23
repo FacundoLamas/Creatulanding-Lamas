@@ -1,5 +1,5 @@
 import Carrito from "./cartwidget"
-
+import { NavLink } from "react-router-dom";
 
 const Nav = (props)=>{
     return <nav>
@@ -14,14 +14,10 @@ const Nav = (props)=>{
                 </div>
                 <ul id="navLinks">
                     <li>
-                        <a href={props.linkactual}>
-                            {props.actual}
-                        </a>
+                        <NavLink to={props.linkactual}>{props.actual}</NavLink>
                     </li>
                     <li>
-                        <a href={props.linkotra}>
-                            {props.otra}
-                        </a>
+                        <NavLink to={props.linkotra}>{props.otra}</NavLink>
                     </li>
                 </ul>
                 { props.carrito ? <div></div> :

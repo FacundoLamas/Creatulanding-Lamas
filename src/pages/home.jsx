@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react'
 
-import Nav from "./navbar"
-import Lista from "./itemList"
-import FOOTER from './footer'
+import Nav from "../components/navbar"
+import Lista from "../components/itemList"
+import FOOTER from '../components/footer'
+import contextThin from '../contex';
 
 
 
@@ -20,7 +21,6 @@ const Home = () =>{
     
     const cambio = (event) => {setTexto(event.target.value)}
 
-
     function contar (array){
         let count=0;
         array.forEach(element => {
@@ -32,6 +32,7 @@ const Home = () =>{
     
     
     return  <>
+    
             <Nav actual={"Remeras"} linkactual={"/"} otra={"Camperas"} linkotra={"/camperas"} compra={{compras,eliminarcompra}} itemsCarrito={contar(compras)} />
             <Lista titulo={"Remeras"} funcion={comprar}  />
             <input type="text" onChange={cambio}/>

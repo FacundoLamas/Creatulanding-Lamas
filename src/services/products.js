@@ -16,5 +16,7 @@ const obtenerProductoSimple = (id) =>{
         resolve({succes:true,data:productos[id]})
     })
 }
+    const Service = {obtenerProductoSimple,obtenerProductos}
 
-    export {obtenerProductos,obtenerProductoSimple}
+
+    export default Service
